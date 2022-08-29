@@ -1,0 +1,148 @@
+.header_section{
+  position:fixed;
+  top:0;
+  right:0;
+  left: 0;
+  height: 50px;
+  border-bottom-style: solid;
+  border-bottom-color: gray;
+  border-bottom-width: 1px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  background-color: rgb(227, 227, 236);
+
+}
+.section_title{
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+.ViewCart{
+  width: 40px;
+  cursor: pointer;
+}
+.Cart{
+  display: block;
+  position:fixed;
+  top:0px;
+  bottom: 0px;
+  right: -100%;
+  width: 360px;
+  padding: 5px;
+  border: 2px solid;
+  background-color: antiquewhite;
+  z-index: 10;
+}
+.Cart.active{
+  right:0;
+}
+.Cart_box{
+  display: grid;
+  grid-template-columns: 32% 40% 28%;
+  align-items: center;
+  margin-top: 1em;
+  column-gap: 0.5em;
+}
+.Cart_image{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 10px;
+}
+.Product_detail{
+  display: grid;
+  row-gap: 1em;
+}
+.Product_title{
+  font-size: 1em;
+  font-weight: 500;
+
+}
+.Product_price{
+  font-size: 1em;
+  font-weight: 300;
+}
+.Product_quantity{
+  width: 30px;
+  text-align: center;
+  border: 1px solid;
+}
+.Delete_product{
+  width: 30px;
+  cursor: pointer;
+}
+.Delete_product:hover{
+  background-color: red;
+}
+.Cart_title{
+  font-size: 2em;
+  text-align: center;
+  font-weight: 400;
+}
+.product_box{
+  position: relative;
+}
+.product_box:hover{
+border: 1px solid;
+padding: 10px;
+}
+.product_image{
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.product_title{
+font-size: 1.2rem;
+font-weight: 700;
+text-transform: uppercase;
+}
+.Price{
+  font-weight: 600;
+}
+.AddToCart{
+  width: 30px;
+  padding: 10px;
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(209, 192, 192);
+  cursor: pointer;
+}
+.Total_cart{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5em;
+  border-top: solid 1px;
+}
+.Total_title{
+  font-size: 1em;
+  font-weight: 800;
+}
+.Total_price{
+  font-size: 1em;
+  font-weight: 1000;
+}
+.Close_cart{
+  width: 30px;
+  position: absolute;
+  top:1rem;
+  right: 0.8rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.Close_cart:hover{
+  background-color: red;
+}
+body{
+  padding-top: 20px;
+
+}
+.product_preview{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit, minmax(220px,auto));
+ gap:1rem;
+}
