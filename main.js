@@ -51,13 +51,14 @@ function addProductToCart(title, price, productImage){
     var cartShopBox = document.createElement("div");
     cartShopBox.classList.add("Cart_box");
     var cartItems = document.querySelector(".Cart_content");
-    var itemTitles = cartItems.getElementsByClassName("Product_title");
-    for(var i= 0; i<itemTitles.length; i++){
-        alert("monica");
-        return;
+    var CartItemImg = cartItems.getElementsByClassName("Cart_image");
+    for(var i= 0; i<CartItemImg.length; i++){
+       if(CartItemImg[i].src == productImage){
+            alert("You have already added this item");
+            return;
+       }
     }
-}
-var cartBoxContent =`
+var cartBoxContent = `
         <img src= "${productImage}" alt=" " class="Cart_image">
           <div class="Product_detail">
             <div class="Product_title">${title}</div>
@@ -65,11 +66,11 @@ var cartBoxContent =`
             <input type="number" value='1' class="Product_quantity">
           </div>
           <img src="icon/bin.png" class="Delete_product" alt="RemoveFromCart"></img>`;
-cartShopBox.innerText = cartBoxContent;
-cartItems.append(cartShopBox);
+cartShopBox.innerHTML = cartBoxContent;
+cartItems.appendChild(cartShopBox);
 cartShopBox.querySelector(".Delete_product").addEventListener("click", removeCartItem);
 cartShopBox.querySelector(".Product_quantity").addEventListener("change", quantityChanged);
-
+}
 //update quantites
 var quantityInputs = document.getElementsByClassName("Product_quantity")
 for(var i= 0; i<quantityInputs.length; i++){
